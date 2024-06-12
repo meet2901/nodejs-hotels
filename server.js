@@ -1,10 +1,11 @@
 const express = require('express');
 const db = require('./db');
 const app = express();
-
+require('dotenv').config();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+const PORT=process.env.PORT||3000
 app.get('/',(req,res)=>{
     res.send('welcome to nayana ben hotels ')
 })
@@ -16,7 +17,7 @@ const menuRouter = require('./routers/menuRouter');
 
 app.use('/menu', menuRouter);
 
-app.listen(3500, () => {
+app.listen(PORT, () => {
     console.log(`server is listing on port 3500`);
 });
 //
