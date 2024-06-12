@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 
 require('dotenv').config()
 //mongodb database URL 
-const mongoURL=process.env.MONGO_URL
+const mongoURL=process.env.MONGODB_URL
 
 
 //giving conection of databases on URL
